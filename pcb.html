@@ -154,6 +154,21 @@
 }
 
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
   </style>
   
 </head>
@@ -205,6 +220,12 @@
 
     <p>One of our projects features a custom PCB equipped with a converter that formats data for transmission to a Lantronix module via UART. The Lantronix then communicates this data over Ethernet through an RJ45 port, providing a seamless bridge between embedded systems and networked applications.</p>
     <p>This solution demonstrates our expertise in designing PCBs for reliable data acquisition and network communication.</p>
+
+<!-- Images container -->
+    <div class="hardware-images">
+      <img src="images/eagle.avif" alt="Hardware design 1">
+      <img src="images/altium.webp" alt="Hardware design 3">
+    </div>
 
     </div>
   </div>

@@ -153,6 +153,20 @@
   cursor: pointer;
 }
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
 
   </style>
   
@@ -203,7 +217,13 @@
 Using National Instruments platforms — LabVIEW, LabWindows/CVI, and TestStand — as well as Python and .NET, we design customized, scalable solutions that perfectly fit each project’s requirements.</p>
 <p>Whether built on our own TestStand-based sequencer or integrated into the customer’s existing system, our software ensures efficiency, flexibility, and full traceability throughout the testing process.</p>
 
-
+<!-- Images container -->
+    <div class="hardware-images">
+      
+      <img src="images/imagesw.png" alt="Hardware design 2">
+      <img src="images/visual-studio-ex.png" alt="Hardware design 2">
+      <img src="images/téléchargement.jpeg" alt="Hardware design 2">
+    </div>
     
 
     </div>

@@ -154,6 +154,22 @@
 }
 
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
+
   </style>
   
 </head>
@@ -203,7 +219,12 @@
     <p>We use professional design tools such as Altium Designer and Autodesk Eagle for schematic capture and PCB layout, combined with LTspice and other simulation software to validate circuit performance and reliability before production.</p>
     <p>This integrated approach ensures high-quality, cost-effective, and robust hardware solutions ready for industrial applications.</p>
 
-    
+    <!-- Images container -->
+    <div class="hardware-images">
+      <img src="images/eagle.avif" alt="Hardware design 1">
+      <img src="images/image.png" alt="Hardware design 2">
+      <img src="images/altium.webp" alt="Hardware design 3">
+    </div>
 
     </div>
   </div>

@@ -154,6 +154,21 @@
 }
 
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
   </style>
   
 </head>
@@ -204,6 +219,11 @@
     <p>To ensure seamless operation, we also develop dedicated test software using National Instruments platforms such as LabVIEW, LabWindows/CVI, and TestStand.</p>
 
     
+<!-- Images container -->
+    <div class="hardware-images">
+      <img src="images/image (3).png" alt="Hardware design 1">
+      
+    </div>
 
     </div>
   </div>

@@ -153,6 +153,26 @@
   cursor: pointer;
 }
 
+.page-menu-item {
+  height: 350px; /* fixed height for all items */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps text at bottom */
+  overflow: hidden;
+}
+
+.page-menu-item .fit-cover {
+  flex: 1; /* takes all remaining space */
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-menu-item .fit-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill container without distortion */
+}
+
 
   </style>
   

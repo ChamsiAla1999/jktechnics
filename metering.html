@@ -154,6 +154,20 @@
 }
 
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
   </style>
   
 </head>
@@ -202,7 +216,15 @@
    <p> At JKTechnics, we design and develop innovative solutions for intelligent energy and water metering systems.</p>
    <p> Among our recent projects is a communication device that connects directly to the P1 port of a smart meter, securely transmitting real-time consumption data to a remote server.</p>
    <p> This solution enables end users to monitor and analyze their energy usage through an intuitive web dashboard or mobile application, promoting transparency, efficiency, and smarter resource management.</p>
+   
+   <!-- Images container -->
+    <div class="hardware-images">
+      <img src="images/p5.png" alt="Hardware design 1">
+      
     </div>
+  
+  
+  </div>
   </div>
 </div>
 
