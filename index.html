@@ -282,67 +282,49 @@
 
 
 
-
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;       /* stack elements vertically */
-    align-items: center;
-    padding: 10px 20px;           /* reduce padding */
+  /* Menu principal vertical */
+  .header-buttons {
+    flex-direction: column;   /* empile les boutons */
+    width: 100%;
+    gap: 8px;                 /* espace entre boutons */
+    padding: 10px;            /* padding autour du bloc */
   }
-
-  .logo-container {
-    flex-direction: column;       /* stack logo and buttons */
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo img {
-    height: 50px;                 /* smaller logo for mobile */
-    width: auto;
-    display: block;
-    margin-bottom: 10px;          /* space between logo and menu */
-  }
-
 
   .header-buttons a,
   .header-buttons .dropdown > a {
-    width: 100%;              /* lien prend toute la largeur */
+    width: 100%;              /* prend toute la largeur */
     text-align: center;
-    padding: 12px 0;          /* plus facile à cliquer */
+    padding: 12px 15px;       /* padding intérieur pour le texte */
+    box-sizing: border-box;   /* inclut le padding dans la largeur */
+    border-radius: 8px;       /* coins arrondis */
   }
 
+  /* Dropdown mobile */
   .dropdown-content {
-    position: static;             /* makes dropdowns stack under buttons */
+    position: static;         /* sous-menu sous le parent */
+    display: none;            /* caché par défaut */
+    background: #003471;
+    border-radius: 8px;       /* coins arrondis */
     box-shadow: none;
-    background: transparent;
-    text-align: center;
+    width: 100%;
+    padding: 5px 0;           /* padding autour des liens */
   }
 
   .dropdown-content a {
-    background: #003471;
-    color: white;
-    border-radius: 6px;
-    margin: 4px 0;
     display: block;
-  }
-}
-@media (max-width: 768px) {
-  
-
-  
-}
-
-
-/* Spécial mobile: affiche le dropdown quand il a la classe "open" */
-@media (max-width: 768px) {
-  .dropdown-content {
-    display: none;
+    padding: 10px 15px;       /* padding pour chaque lien */
+    color: white;
+    text-align: center;
   }
 
+  /* Dropdown visible quand parent open */
   .dropdown.open .dropdown-content {
     display: block;
   }
 }
+
+
 
   </style>
   
