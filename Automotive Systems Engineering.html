@@ -290,11 +290,60 @@
   align-items: center;
   white-space: nowrap;
 }
+
+
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;       /* stack elements vertically */
+    align-items: center;
+    padding: 10px 20px;           /* reduce padding */
+  }
+
+  .logo-container {
+    flex-direction: column;       /* stack logo and buttons */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 50px;                 /* smaller logo for mobile */
+    width: auto;
+    display: block;
+    margin-bottom: 10px;          /* space between logo and menu */
+  }
+
+  .header-buttons {
+    flex-wrap: wrap;              /* allow wrapping if too many buttons */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .header-buttons a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .dropdown-content {
+    position: static;             /* makes dropdowns stack under buttons */
+    box-shadow: none;
+    background: transparent;
+    text-align: center;
+  }
+
+  .dropdown-content a {
+    background: #003471;
+    color: white;
+    border-radius: 6px;
+    margin: 4px 0;
+    display: block;
+  }
+}
   </style>
   
 </head>
 	<body class="layoutContent ru-accueil">
-
 
 <header class="header">
   <div class="logo-container">
@@ -306,11 +355,11 @@
 
       <!-- SERVICES DROPDOWN -->
       <div class="dropdown">
-        <a href="#">Services</a>
+        <a href="#">RF testbenches</a>
         <div class="dropdown-content">
           <a href="functional_test.html">Functional test</a>
           <a href="dev_test_bench.html">Test Bench Integration</a>
-          <a href="dev_test_bench.html">RF testbenches & Antenna testing</a>
+          <a href="rf_test.html">RF testbenches & Antenna testing</a>
           <a href="certification.html">Pre-certification test</a>
         </div>
       </div>
