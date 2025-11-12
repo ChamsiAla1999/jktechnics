@@ -34,8 +34,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 50px;
-      background-color: #f8f8f8;
-      border-bottom: 2px solid #ddd;
+      background-color: #003471;
+      border-bottom: 2px solid #003471;
       font-family: Arial, sans-serif;
 
       .logo-container {
@@ -154,6 +154,134 @@
 }
 
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
+.page-menu-item {
+  height: 350px; /* fixed height for all items */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps text at bottom */
+  overflow: hidden;
+}
+
+.page-menu-item .fit-cover {
+  flex: 1; /* takes all remaining space */
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-menu-item .fit-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill container without distortion */
+}
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto; /* This pushes them to the right */
+}
+
+.header-buttons a {
+  background: #ffffff;
+  color: #003471;
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+  border: 2px solid #ffffff;
+}
+
+.header-buttons a:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes logo left and buttons right */
+  width: 100%;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #ffffff;
+  padding: 8px 0;
+  border-radius: 8px;
+  min-width: 210px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #003471;
+  text-decoration: none;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+/* Hover effect inside dropdown */
+.dropdown-content a:hover {
+  background: #003471;
+  color: #ffffff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header-buttons .dropdown-menu {
+  top: 48px; /* pushes the dropdown down */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  top: calc(100% + 5px); /* 10px space below the button */
+}
+.header-buttons a,
+.header-buttons .dropdown > a {
+    display: flex;              /* flex for vertical alignment */
+    align-items: center;        /* center text vertically */
+    justify-content: center;    /* center text horizontally */
+    padding: 7px 18px;          /* keep your existing padding */
+    height: 42px;               /* force all buttons to the same height */
+    box-sizing: border-box;     /* include padding in height */
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* stays above everything */
+}
+
   </style>
   
 </head>
@@ -161,12 +289,30 @@
 
    
 
-  <header class="header">
+<header class="header">
     <div class="logo-container">
       <div class="logo">
-        <a href="index.html"> <img src="images/logo.jpg" alt="Logo" /></a>
+       <a href="index.html"> <img src="images/new_logo.jpg" alt="Logo" /></a>
       </div>
-      <div class="corporate-name">JKTechnics</div>
+       <div class="header-buttons">
+  <div class="dropdown">
+    <a href="#">Services</a>
+    <div class="dropdown-content">
+      <a href="functional_test.html">Functional test</a>
+      <a href="dev_test_bench.html">Test Bench Integration</a>
+      <a href="certification.html">PreCertification testing </a>
+      <a href="antenna.html">Antenna testing</a>
+      <a href="pcb.html">Circuit design</a>
+      <a href="pcb.html">automative systems</a>
+      <a href="pcb.html">smart meters</a>
+      <a href="pcb.html">projects management</a>
+      <a href="pcb.html">hardware development</a>
+      <a href="pcb.html">software development</a>
+    </div>
+    
+  </div>
+  <a href="#">Contact</a>
+</div>
     </div>
 
     
@@ -199,10 +345,23 @@
   <div class="product-accueil-inner">
 
       <p class="subtitle">Antenna Testing</p>
-    <p>JKTechnics provides advanced antenna testing services to evaluate performance, efficiency, and radiation patterns across a wide range of frequencies.</p>
-    <p>Using precision measurement equipment and anechoic chamber environments, we characterize key parameters such as gain, directivity, VSWR, and polarization.</p>
-    <p>Our team ensures optimal antenna design and integration, supporting customers from early development through final validation to guarantee reliable and high-performance wireless communication.</p>
+    <p>At JKTechnics, we offer comprehensive antenna testing solutions to assess and optimize the performance of antennas used in various wireless applications.
+Our advanced facilities and expertise allow us to evaluate antenna characteristics with high precision over a broad frequency range — from low-frequency IoT modules to high-frequency 5G and RF systems.</p>
+    
+<p>Using state-of-the-art measurement instruments and anechoic chamber environments, we accurately characterize key parameters such as gain, efficiency, directivity, VSWR, impedance matching, and polarization.
+Through detailed radiation pattern analysis, we provide our customers with a full understanding of their antenna behavior in real operating conditions.</p>
+    
+<p>Our engineering team supports every phase of the product lifecycle — from early design and prototyping to final validation and certification testing.
+Whether you are developing embedded antennas, external modules, or complex multi-antenna systems (MIMO), we ensure reliable, repeatable, and high-performance results that meet the most demanding wireless communication standards.</p>
+   
+  <!-- Images container -->
+    <div class="hardware-images">
+      <img src="images/IMG_3553.jpeg" alt="Hardware design 1">
+      
     </div>
+  
+  
+  </div>
   </div>
 </div>
 
