@@ -303,15 +303,12 @@
     margin-bottom: 10px;          /* space between logo and menu */
   }
 
-  .header-buttons {
-    flex-wrap: wrap;              /* allow wrapping if too many buttons */
-    justify-content: center;
-    gap: 8px;
-  }
 
-  .header-buttons a {
-    font-size: 14px;
-    padding: 6px 12px;
+  .header-buttons a,
+  .header-buttons .dropdown > a {
+    width: 100%;              /* lien prend toute la largeur */
+    text-align: center;
+    padding: 12px 0;          /* plus facile à cliquer */
   }
 
   .dropdown-content {
@@ -329,6 +326,11 @@
     display: block;
   }
 }
+@media (max-width: 768px) {
+  
+
+  
+}
 
 
 /* Spécial mobile: affiche le dropdown quand il a la classe "open" */
@@ -340,12 +342,6 @@
   .dropdown.open .dropdown-content {
     display: block;
   }
-}
-.header-buttons .dropdown > a {
-  display: block;          /* prend toute la largeur du parent */
-  width: 100%;             /* exactement toute la largeur */
-  padding: 12px 18px;      /* plus de zone cliquable */
-  box-sizing: border-box;  /* padding inclus dans la largeur */
 }
 
   </style>
