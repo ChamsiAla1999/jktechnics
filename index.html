@@ -362,6 +362,10 @@
   font-weight: 600;
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+.mobile-menu.open {
+  display: flex;
+  flex-direction: column;
+}
 
 .submenu {
   display: none;
@@ -385,57 +389,32 @@
   
 </head>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // On détecte si c’est un mobile
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  if (!isMobile) return; // ne rien faire sur PC
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
 
-  // Sélection de tous les menus dropdown
-  const dropdowns = document.querySelectorAll('.dropdown');
+  toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
 
-  dropdowns.forEach(dropdown => {
-    const trigger = dropdown.querySelector('a'); // le lien principal
-
-    // Empêche le lien d'agir comme un vrai lien (pas de scroll)
-    trigger.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      // Ferme tous les autres menus
-      dropdowns.forEach(d => {
-        if (d !== dropdown) d.classList.remove('open');
-      });
-
-      // Bascule le menu actuel
-      dropdown.classList.toggle('open');
+  // Submenu toggle
+  document.querySelectorAll('.mobile-menu > a').forEach(link => {
+    link.addEventListener('click', e => {
+      const next = link.nextElementSibling;
+      if (next && next.classList.contains('submenu')) {
+        e.preventDefault();
+        next.style.display = next.style.display === 'flex' ? 'none' : 'flex';
+      }
     });
   });
-
-  // Ferme le menu si on clique ailleurs
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.dropdown')) {
-      dropdowns.forEach(d => d.classList.remove('open'));
-    }
-  });
 });
 </script>
-<script>
-  // Toggle mobile menu
-const toggle = document.querySelector('.mobile-menu-toggle');
-const menu = document.querySelector('.mobile-menu');
-toggle.addEventListener('click', () => menu.classList.toggle('open'));
 
-// Toggle submenu
-document.querySelectorAll('.mobile-menu > a').forEach(link => {
-  link.addEventListener('click', e => {
-    const next = link.nextElementSibling;
-    if(next && next.classList.contains('submenu')) {
-      e.preventDefault();
-      next.style.display = next.style.display === 'flex' ? 'none' : 'flex';
-    }
-  });
-});
-
-</script>
 	<body class="layoutContent ru-accueil">
 
 <header class="header">
