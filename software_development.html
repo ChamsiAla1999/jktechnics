@@ -281,6 +281,16 @@
   z-index: 999; /* stays above everything */
 }
 
+.dropdown-content {
+  min-width: 260px;
+}
+
+.dropdown-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
   </style>
   
 </head>
@@ -288,35 +298,52 @@
 
    
 
- <header class="header">
-    <div class="logo-container">
-      <div class="logo">
-       <a href="index.html"> <img src="images/new_logo.jpg" alt="Logo" /></a>
-      </div>
-       <div class="header-buttons">
-  <div class="dropdown">
-    <a href="#">Services</a>
-    <div class="dropdown-content">
-      <a href="functional_test.html">Functional test</a>
-      <a href="dev_test_bench.html">Test Bench Integration</a>
-      <a href="dev_test_bench.html">RF testbenches</a>
-      <a href="certification.html">Pre-Certification test </a>
-      <a href="antenna.html">Antenna testing</a>
-      <a href="pcb.html">Circuit design</a>
-      <a href="Automotive Systems Engineering.html">Automative systems</a>
-      <a href="metering.html">Smart meters</a>
-      <a href="management.html">Projects management</a>
-      <a href="hardware development.html">Hardware development</a>
-      <a href="software_development.html">Software development</a>
-    </div>
-    
-  </div>
-  <a href="#contact">Contact</a>
-</div>
+
+<header class="header">
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html"><img src="images/new_logo.jpg" alt="Logo" /></a>
     </div>
 
-    
-  </header>
+    <div class="header-buttons">
+
+      <!-- SERVICES DROPDOWN -->
+      <div class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <a href="functional_test.html">Functional test</a>
+          <a href="dev_test_bench.html">Test Bench Integration</a>
+          <a href="dev_test_bench.html">RF testbenches & Antenna testing</a>
+          <a href="certification.html">Pre-certification test</a>
+        </div>
+      </div>
+
+      <!-- PCB DESIGN DROPDOWN -->
+      <div class="dropdown">
+        <a href="#">PCB Design</a>
+        <div class="dropdown-content">
+          <a href="hardware development.html">Hardware development</a>
+          <a href="software_development.html">Software development</a>
+          <a href="pcb.html">Circuit design</a>
+        </div>
+      </div>
+
+      <!-- PROJECT MANAGEMENT DROPDOWN -->
+      <div class="dropdown">
+        <a href="#">Project Management</a>
+        <div class="dropdown-content">
+          <a href="Automotive Systems Engineering.html">Automotive systems</a>
+          <a href="metering.html">Smart meters</a>
+          <a href="management.html">Projects management</a>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
 
 
 		<div id="page">
