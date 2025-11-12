@@ -331,9 +331,55 @@
 }
 
 
+/* Spécial mobile: affiche le dropdown quand il a la classe "open" */
+@media (max-width: 768px) {
+  .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+}
+
   </style>
   
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // On détecte si c’est un mobile
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  if (!isMobile) return; // ne rien faire sur PC
+
+  // Sélection de tous les menus dropdown
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const trigger = dropdown.querySelector('a'); // le lien principal
+
+    // Empêche le lien d'agir comme un vrai lien (pas de scroll)
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Ferme tous les autres menus
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove('open');
+      });
+
+      // Bascule le menu actuel
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  // Ferme le menu si on clique ailleurs
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown')) {
+      dropdowns.forEach(d => d.classList.remove('open'));
+    }
+  });
+});
+</script>
+
 	<body class="layoutContent ru-accueil">
 
 <header class="header">
