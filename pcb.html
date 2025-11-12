@@ -281,6 +281,7 @@
   width: 100%;
   z-index: 999; /* stays above everything */
 }
+
 .dropdown-content {
   min-width: 260px;
 }
@@ -293,55 +294,139 @@
 }
 
 
+
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;       /* stack elements vertically */
-    align-items: center;
-    padding: 10px 20px;           /* reduce padding */
-  }
-
-  .logo-container {
-    flex-direction: column;       /* stack logo and buttons */
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo img {
-    height: 50px;                 /* smaller logo for mobile */
-    width: auto;
-    display: block;
-    margin-bottom: 10px;          /* space between logo and menu */
-  }
-
+  /* Menu principal vertical */
   .header-buttons {
-    flex-wrap: wrap;              /* allow wrapping if too many buttons */
-    justify-content: center;
-    gap: 8px;
+    flex-direction: column;   /* empile les boutons */
+    width: 100%;
+    gap: 8px;                 /* espace entre boutons */
+    padding: 10px;            /* padding autour du bloc */
   }
 
-  .header-buttons a {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-
-  .dropdown-content {
-    position: static;             /* makes dropdowns stack under buttons */
-    box-shadow: none;
-    background: transparent;
+  .header-buttons a,
+  .header-buttons .dropdown > a {
+    width: 100%;              /* prend toute la largeur */
     text-align: center;
+    padding: 12px 15px;       /* padding intérieur pour le texte */
+    box-sizing: border-box;   /* inclut le padding dans la largeur */
+    border-radius: 8px;       /* coins arrondis */
+  }
+
+  /* Dropdown mobile */
+  .dropdown-content {
+    position: static;         /* sous-menu sous le parent */
+    display: none;            /* caché par défaut */
+    background: #003471;
+    border-radius: 8px;       /* coins arrondis */
+    box-shadow: none;
+    width: 100%;
+    padding: 5px 0;           /* padding autour des liens */
   }
 
   .dropdown-content a {
-    background: #003471;
+    display: block;
+    padding: 10px 15px;       /* padding pour chaque lien */
     color: white;
-    border-radius: 6px;
-    margin: 4px 0;
+    text-align: center;
+  }
+
+  /* Dropdown visible quand parent open */
+  .dropdown.open .dropdown-content {
     display: block;
   }
 }
+
+
+
+/* Toggle burger icon */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 10px;
+}
+.mobile-menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Menu mobile hidden by default */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #003471;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+}
+
+.mobile-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.mobile-menu.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background: #004a99;
+}
+
+.submenu a {
+  padding-left: 40px;
+  border: none;
+}
+
+/* Media query mobile */
+@media(max-width:768px) {
+  .header-buttons { display: none; } /* hide desktop buttons */
+  .mobile-menu-toggle { display: flex; }
+}
+
+
   </style>
   
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+
+  toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+
+  // Submenu toggle
+  document.querySelectorAll('.mobile-menu > a').forEach(link => {
+    link.addEventListener('click', e => {
+      const next = link.nextElementSibling;
+      if (next && next.classList.contains('submenu')) {
+        e.preventDefault();
+        next.style.display = next.style.display === 'flex' ? 'none' : 'flex';
+      }
+    });
+  });
+});
+</script>
 	<body class="layoutContent ru-accueil">
 
    
@@ -351,6 +436,42 @@
     <div class="logo">
       <a href="index.html"><img src="images/new_logo.jpg" alt="Logo" /></a>
     </div>
+
+<!-- Add this inside your <header class="header">, after logo -->
+<div class="mobile-menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="mobile-menu">
+  <a href="#">RF testbenches</a>
+  <div class="submenu">
+    <a href="functional_test.html">Functional test</a>
+    <a href="dev_test_bench.html">Test Bench Integration</a>
+    <a href="rf_test.html">RF testbenches & Antenna testing</a>
+    <a href="certification.html">Pre-certification test</a>
+  </div>
+
+  <a href="#">PCB Design</a>
+  <div class="submenu">
+    <a href="hardware development.html">Hardware development</a>
+    <a href="software_development.html">Software development</a>
+    <a href="pcb.html">Circuit design</a>
+  </div>
+
+  <a href="#">Project Management</a>
+  <div class="submenu">
+    <a href="Automotive Systems Engineering.html">Automotive systems</a>
+    <a href="metering.html">Smart meters</a>
+    <a href="management.html">Projects management</a>
+  </div>
+
+  <a href="#contact">Contact</a>
+</div>
+
+
+
 
     <div class="header-buttons">
 
