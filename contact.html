@@ -29,14 +29,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
-  
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 50px;
       background-color: #003471;
-      
       border-bottom: 2px solid #003471;
       font-family: Arial, sans-serif;
 
@@ -155,6 +153,21 @@
   cursor: pointer;
 }
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
 .page-menu-item {
   height: 350px; /* fixed height for all items */
   display: flex;
@@ -267,7 +280,6 @@
   width: 100%;
   z-index: 999; /* stays above everything */
 }
-
 
 .dropdown-content {
   min-width: 260px;
@@ -384,10 +396,6 @@
   .mobile-menu-toggle { display: flex; }
 }
 
-.contact-button {
-  text-align: center;
-  margin-top: 20px;
-}
 
   </style>
   
@@ -418,8 +426,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
 	<body class="layoutContent ru-accueil">
+
+   
+
 
 <header class="header">
   <div class="logo-container">
@@ -503,6 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </header>
 
 
+
 		<div id="page">
 			
 			<main>
@@ -525,233 +536,174 @@ document.addEventListener('DOMContentLoaded', () => {
 								  
 <h1>JKTechnics <span>From design to implementation</span></h1>
 
-<div class="pres-metier">
-  <div class="pres-metier-inner">
-    <div class="pres-metier-text"><p class="subtitle">Fields of Expertise</p><h2>Present in all areas of testing</h2>
-
-<h4>At JKTechnics</h4>
-<p>Our expertise centers on <strong>circuit and radio system testing</strong>, covering design, validation, and optimization.</p>
-
-<h4>Radio Development & Testing</h4>
-<p>We specialize in <strong>antenna development</strong>, <strong>Pre-certification testing in anechoic chambers</strong>, and <strong>automation of FCT machines</strong>, alongside comprehensive <strong>hardware and software solutions</strong>.</p>
-
-<h4>Test Bench Design</h4>
-<p>We create <strong>complete test benches</strong> with detailed <strong>wiring diagrams</strong> tailored to each project.</p>
-
-<h5>Consulting & Support</h5>
-<p>Our services also include <strong>consulting</strong> and <strong>support</strong> across sectors such as <strong>automotive</strong>, <strong>water and electricity metering</strong>, <strong>software development</strong>, and <strong>technical project management</strong>.</p></div>
-    <div class="pres-metier-list">
-      
-
-        
-        <a href="functional_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-pupitres-racks.png" alt="icons-icon-pupitres-racks">
-
-
-          <p>Functional test </p>       
-        </a>
-      
-
-      
-
-        <a href="dev_test_bench.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-bancs-de-test.png" alt="icons-icon-bancs-de-test">
-
-
-          <p>Test Bench Integration</p>       
-        </a>
-
-      
-
-      <a href="certification.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-chassis-rack-deverminage.png" alt="icons-icon-chassis-rack-deverminage">
-
-
-          <p>Pre-Certification testing in anechoic chambers</p>       
-      </a>
-
-         
-
-    
-
-      <a href="rf_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/Gemini_Generated_Image_bydbfdbydbfdbydb-removebg-preview (Personnalisé).png" alt="icons-icon-cobotique">
-
-
-          <p>Radio frequency testbenches</p>       
-      </a>
-         
-      
-
-         <a href="pcb.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-routage-cartes-elec.png" alt="icons-icon-routage-cartes-elec">
-
-
-          <p>Circuit design</p>       
-         </a>
-
-      
-
-      
-         
-<a href="Automotive Systems Engineering.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-      
-          <div class="viewproduct"></div>
-          <img src="images/auto_ingeneering.png" alt="icons-icon-interfaces-test-in-situ">
-
-
-          <p>Automotive Systems Engineering </p>       
-</a>
-
-      
-        <a href="metering.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/meters.png" alt="icons-icon-interfaces-test-in-situ">
-
-
-          <p>Smart meters Engineering </p>       
-        </a>
-
-
-         
-        <a href="management.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-outillage-machines-speciales.png" alt="icons-icon-outillage-machines-speciales">
-
-
-          <p>Technical projects management</p>       
-      </a>
-
-      <a href="hardware development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-interfaces-test-in-situ.png" alt="Outillage-fabrication">
-
-
-          <p>Hardware development</p>       
-      </a>
-      
-        <a href="software_development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/outillage-fabrication.png" alt="Outillage-fabrication">
-
-
-          <p>Software development</p>       
-        </a>
-         
-
-      
-    </div>
-  </div>
-</div>
 
 <div class="product-accueil">
   <div class="product-accueil-inner">
+<div class="structured_text_semantique_text">
+        <div class="code_html"><h2 style="text-align: center;">Write us</h2>
 
-      <p class="subtitle">Our High-Precision Laboratory Equipment</p>
-      <h2>JKTechnics: precision and performance thanks to our state-of-the-art laboratory equipment.</h2>
 
-    <div class="page-menu">
+</div>
+      </div>
 
-      <div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/10.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Mixed Signal Oscilloscope</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Mixed Signal Oscilloscope</h3>
-  </div>
+
+<div class="formulaire">
+	
+	
+	<a name="formulaire"></a> 
+	<form method="post"  id="formpersonnalise8" enctype="multipart/form-data" action="https://formsubmit.co/chamsiala599@gmail.com">
+
+				<fieldset>
+
+
+
+						<div class="fieldGroup">
+           		<label for="field82id" class="inline">
+								Compagny
+								
+							</label>
+							<div class="form_field">
+								<input type="text" name="field82" id="field82id">
+								
+									
+							</div>
+							
+						</div>
+
+						
+
+						<div class="fieldGroup">
+           		<label for="field38id" class="inline">
+								Name
+								<span class="obligatory">*</span>
+							</label>
+							<div class="form_field">
+								<input type="text" name="field38" id="field38id">
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field39id" class="inline">
+								First name
+								
+							</label>
+							<div class="form_field">
+								<input type="text" name="field39" id="field39id">
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field40" class="inline">
+								Address
+								
+							</label>
+							<div class="form_field">
+								<textarea name="field40" id="field40" cols="32" rows="5"></textarea>
+
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field41id" class="inline">
+								Postal code
+								
+							</label>
+							<div class="form_field">
+								<input type="text" name="field41" id="field41id">
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field42id" class="inline">
+								City
+								
+							</label>
+							<div class="form_field">
+								<input type="text" name="field42" id="field42id">
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field43id" class="inline">
+								Phone
+								
+							</label>
+							<div class="form_field">
+								<input type="text" name="field43" id="field43id">
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field44id" class="inline">
+								E-mail
+								<span class="obligatory">*</span>
+							</label>
+							<div class="form_field">
+								<input type="text" name="field44" id="field44id">
+								
+									
+							</div>
+							
+						</div>
+
+						<div class="fieldGroup">
+           		<label for="field45" class="inline">
+								Your message
+								<span class="obligatory">*</span>
+							</label>
+							<div class="form_field">
+								<textarea name="field45" id="field45" cols="32" rows="5"></textarea>
+
+								
+									
+							</div>
+							
+						</div>
+
+						
+
+				</fieldset>
+
+
+				<div id="captcha">
+					
+					<span>
+						
+							
+					
+	<div id="html_element"></div><input type="hidden" name="recaptcha_response_field" value="1"><div class="g-recaptcha" data-sitekey="sitekey"></div><input type="hidden" name="recaptcha_challenge_field" value="1">
+</span>
+				</div>
+
+			<div class="submit"><input type="submit" name="submit" id="submitid" value="Submit" class="valid"><input type="reset" name="reset" id="reset" value="Cancel" class="valid"></div>
+			<div><input type="hidden" id="form_submit" name="form_submit" value="form8"></div>
+	</form>
+
 </div>
 
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/12.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">RF Signal Generator</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>RF Signal Generator</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/13.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Vector Network Analyzer</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Vector Network Analyzer</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/14.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Spectrum Analyzer</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Spectrum Analyzer</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/15.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Frequency Counter</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Frequency Counter</h3>
-  </div>
-</div>
-
-    
-
-    </div>
-  </div>
-</div>
-
-<div class="product-accueil">
-  <div class="product-accueil-inner">
-
-      <p class="subtitle">Our Expertise Portfolio</p>
-      <h2>Expertise and innovation showcased through our projects and achievements.</h2>
+      </div>
+      </div>
 
 
 
-      
-    <div class="page-menu">
-
-
-
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/p2.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">FCT station</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>FCT station</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/1.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">FCT station</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>FCT station</h3>
-  </div>
-</div>
-        
-
-    </div>
-  </div>
-</div>
 
 <div class="pres-accueil">
   <div class="pres-accueil-inner">
@@ -767,35 +719,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="contact-info">
   <h2 id="contact">Contact</h2>
-
   <div class="contact-item">
     <h3>Address</h3>
     <p>002, Mohamed Badra 1 et N 1, Montplaisir 1002</p>
   </div>
-
-  <br>
-
+<br>
   <div class="contact-item">
     <h3>Phone</h3><br>
     <a href="tel:+21658542836">+33 6 52 91 98 51</a>
-    <br><br>
+      <br>
     <a href="tel:+21621454187">+216 21 454 187</a>
   </div>
-
-  <br>
-
+<br>
   <div class="contact-item">
     <h3>Email</h3>
     <br>
     <a href="mailto:info@jktechnics.com">info@jktechnics.com</a>
+
   </div>
-
-<div class="contact-button">
-  <a href="contact.html" class="valid">Contact Us</a>
 </div>
-
-</div>
-
 
 <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.6485732559285!2d10.188343575845448!3d36.817826669823836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34185a6a3157%3A0x6cf0f78f2e41b274!2s002%20Av.%20Mohamed%20Badra%201%20et%20N%201%2C%20Montplaisir%2C%20Tunis%201002!5e0!3m2!1sen!2stn!4v1730010136491!5m2!1sen!2stn"
