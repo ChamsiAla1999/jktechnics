@@ -395,7 +395,9 @@
   .header-buttons { display: none; } /* hide desktop buttons */
   .mobile-menu-toggle { display: flex; }
 }
-
+ h2, h3, h4 {
+    color: white;
+  }
 
   </style>
   
@@ -539,59 +541,125 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="product-accueil">
   <div class="product-accueil-inner">
 
-      <p class="subtitle">Introduction of Radio Frequency Identification (RFID)</p>
-    <p><b>Radio Frequency Identification (RFID) </b>is a form of wireless communication that incorporates the use of electromagnetic or electrostatic coupling in the radio frequency portion of the electromagnetic spectrum to uniquely identify an object or person. It uses radio frequency to search, identify, track, and communicate with items and people.</p>
-    
-    <p>RFID (Radio Frequency Identification) is a technology that uses electromagnetic fields to automatically identify and track tags attached to objects. These tags contain electronically stored information that can be read from several meters away, without requiring direct line-of-sight. RFID is commonly used in inventory management, asset tracking, access control, and supply chain logistics due to its efficiency and accuracy in tracking and managing items.</p>
+    <p class="subtitle">Introduction of Radio Frequency Identification (RFID)</p>
 
-    <p>It is a method that is used to track or identify an object by radio transmission over the web. Data is digitally encoded in an RFID tag which might be read by the reader. This device works as a tag or label during which data is read from tags that are stored in the database through the reader as compared to traditional barcodes and QR codes. It is often read outside the road of sight either passive or active RFID.</p>
+<p><b>Radio Frequency Identification (RFID)</b> is a form of wireless communication that uses electromagnetic coupling to uniquely identify objects or persons. It uses radio frequency to search, identify, track, and communicate with items and people.</p>
 
+<p>RFID is a technology that uses electromagnetic fields to automatically identify and track tags attached to objects. These tags contain electronically stored information that can be read from several meters away without requiring direct line-of-sight. It is widely used in inventory management, asset tracking, access control, and supply chain logistics due to its efficiency.</p>
 
-    <div class="hardware-images">
-      <img src="images/rfid_2.png" alt="Hardware design 2">
-    </div>
-    <br>
-    <p><b>Types of RFID</b></p>
-    <p>There are many kinds of RFID, each with different properties, but perhaps the most fascinating aspect of RFID technology is that most RFID tags have neither an electric plug nor a battery. Instead, all of the energy needed to operate them is supplied in the form of radio waves by RFID readers. This technology is called passive RFID to distinguish it from the(less common) active RFID in which there is a power source on the tag.</p>
+<p>It is a method used to track or identify an object by radio transmission. Data is digitally encoded in an RFID tag and read by a reader. Unlike traditional barcodes or QR codes, RFID tags can be read without line-of-sight and can be active or passive.</p>
 
-    
+<div class="hardware-images">
+  <img src="images/rfid_2.png" alt="Hardware design 2">
+</div>
+<br>
 
-    <ul type="disc">
-    <li><b>UHF RFID ( Ultra-High Frequency RFID )</b>. It is used on shipping pallets and some driver's licenses. Readers send signals in the 902-928 MHz band. Tags communicate at distances of several meters by changing the way they reflect the reader signals; the reader is able to pick up these reflections. This way of operating is called backscatter.</li>
-    <li><b>HF RFID (High-Frequency RFID )</b>. It operates at 13.56 MHz and is likely to be in your passport, credit cards, books, and noncontact payment systems. HF RFID has a short-range, typically a meter or less because the physical mechanism is based on induction rather than backscatter. </li>   
-    
-    <ul type="disc">
-    <p><b>Passive RFID:</b> Passive RFID tags does not have their own power source. It uses power from the reader. In this device, RF tags are not attached by a power supply and passive RF tag stored their power. When it is emitted from active antennas and the RF tag are used specific frequency like 125-134KHZ as low frequency, 13.56MHZ as a high frequency and 856MHZ to 960MHZ as ultra-high frequency. </p>
-    <li>  ●  No need embedded power</li>
-    <li>  ●  Tracking inventory</li>
-    <li>  ●  Has unique identification number</li>
-    <li>  ●  Sensitive for interference</li>
-    <li>  ●  Semi-passive RFID</li>
-    </ul>
+<p><b>Types of RFID</b></p>
+<p>There are many kinds of RFID, each with different characteristics. Most RFID tags have no power source; all energy is supplied by readers. This is called <b>passive RFID</b>. Active RFID uses a tag with its own power source.</p>
 
-    <ul type="disc">
-    <li><b>Active RFID:</b> In this device, RF tags are attached by a power supply that emits a signal and there is an antenna which receives the data. means, active tag uses a power source like battery. It has it's own power source, does not require power from source/reader. </li>
-    <li>  ●  Embedded power: communication over large distance</li>
-    <li>  ●  Has unique identifier /identification number</li>
-    <li>  ●  Use other devices like sensors</li>
-    <li>  ●  Better than passive tags in the presence of metal</li>
-    </ul>
+<ul>
+  <li><b>UHF RFID (Ultra-High Frequency)</b>: Used in logistics and shipping (902–928 MHz). Tags reflect signals using backscatter, enabling several-meter read ranges.</li>
+  <li><b>HF RFID (High-Frequency)</b>: Operates at 13.56 MHz. Used in passports, contactless cards, books. Range ≤ 1 meter.</li>
+</ul>
 
-    <p>There are also other forms of RFID using other frequencies, such as LF RFID(Low-Frequency RFID), which was developed before HF RFID and used for tracking. </p>
-    
+<h3>Passive RFID</h3>
+<p>Passive tags have no power source; they use energy from the reader. Frequencies include:</p>
+<ul>
+  <li>125–134 kHz (LF)</li>
+  <li>13.56 MHz (HF)</li>
+  <li>856–960 MHz (UHF)</li>
+  <li>No embedded power</li>
+  <li>Used for tracking inventory</li>
+  <li>Unique identification number</li>
+  <li>Sensitive to interference</li>
+</ul>
 
-    <p><b>Working Principle of RFID</b></p>
-    <p>Generally, RFID uses radio waves to perform AIDC function. AIDC stands for Automatic Identification and Data Capture technology which performs object identification and collection and mapping of the data. An antenna is an device which converts power into radio waves which are used for communication between reader and tag. RFID readers retrieve the information from RFID tag which detects the tag and reads or writes the data into the tag. It may include one processor, package, storage and transmitter and receiver unit. </p> 
-    <!-- Images container -->
-    <div class="hardware-images">
-      <img src="images/rfid_3.png" alt="Hardware design 2">
-    </div>
-        <br>
-     <p><b>Working of RFID System</b></p>
-    <p>Every RFID system consists of three components: a scanning antenna, a transceiver and a transponder. When the scanning antenna and transceiver are combined, they are referred to as an RFID reader or interrogator. There are two types of RFID readers- fixed readers and mobile readers. The RFID reader is a network-connected device that can be portable or permanently attached. It uses radio waves to transmit signals that activate the tag. Once activated, the tag sends a wave back to the antenna, where it is translated into data.</p>
+<h3>Active RFID</h3>
+<p>Active tags have an internal battery that emits signals. They provide long ranges and can support sensors.</p>
+<ul>
+  <li>Embedded power for long-distance communication</li>
+  <li>Unique identification number</li>
+  <li>Can include sensors (temperature, motion, etc.)</li>
+  <li>Perform better than passive tags near metal</li>
+</ul>
 
-    <p>The transponder is in the RFID tag itself. The read range for RFID tags varies based on factors including the type of tag, type of reader, RFID frequency and interference in the surrounding environment or from other RFID tags and readers. Tags that have a stronger power source also have a longer read range.</p>
-    
+<p>Other forms of RFID include LF RFID (Low Frequency), an early technology used for tracking.</p>
+
+<p><b>Working Principle of RFID</b></p>
+<p>RFID uses radio waves for Automatic Identification and Data Capture (AIDC). An antenna converts power into radio waves, enabling communication between the reader and the tag. The reader retrieves information, reads or writes data, and communicates with a host system. A reader contains a processor, memory, transmitter, and receiver.</p>
+
+<div class="hardware-images">
+  <img src="images/rfid_3.png" alt="Hardware design 3">
+</div>
+<br>
+
+<p><b>Working of RFID System</b></p>
+<p>An RFID system consists of three components: a scanning antenna, a transceiver, and a transponder. When combined, the antenna and transceiver form the RFID reader. Readers can be fixed or portable and transmit signals to activate tags.</p>
+
+<p>The transponder is part of the tag. Read range varies by tag type, reader, frequency, and environmental interference. Tags with stronger power sources provide longer ranges.</p>
+
+<section>
+  <h3>Types of RFID Tags</h3>
+
+  <h4>1. Passive Tags</h4>
+  <p>No built-in power source; powered by the reader. Less expensive, long lifespan, shorter range (up to a few meters).</p>
+
+  <h4>2. Active Tags</h4>
+  <p>Have a battery enabling long ranges (up to hundreds of meters). More expensive and limited lifespan.</p>
+
+  <h4>3. Semi-Passive (Battery-Assisted) Tags</h4>
+  <p>Use a small battery to power circuitry but rely on the reader for communication. Balanced in cost, range, and lifespan.</p>
+</section>
+
+<section>
+  <h3>Features of RFID</h3>
+  <p>An RFID tag includes a microchip and an antenna, often encased in protective material. Tags may be passive, semi-passive, or active, with passive tags being the most common.</p>
+</section>
+
+<section>
+  <h3>RFID Standards</h3>
+  <ul>
+    <li>
+      <strong>ISO 14443</strong>
+      <ul>
+        <li>Frequency: 13.56 MHz</li>
+        <li>Power: ~10 mW</li>
+        <li>Data rate: ~100 kbps</li>
+        <li>Range: ~10 cm</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>ISO 15693</strong>
+      <ul>
+        <li>Frequency: 13.56 MHz</li>
+        <li>Range: up to ~1 m</li>
+        <li>Data rate: a few kbps</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3>Frequency Bands</h3>
+  <p>RFID operates across several frequency bands:</p>
+
+  <ul>
+    <li><strong>LF (125–134 kHz)</strong>: Short range (≤10 cm). Used in animal tracking and access control.</li>
+    <li><strong>HF (13.56 MHz)</strong>: Medium range (≤1 m). Used in passports, smart cards, ticketing.</li>
+    <li><strong>UHF (860–960 MHz)</strong>: Long range (≤12 m). Used in logistics and inventory management.</li>
+    <li><strong>Microwave (2.45 GHz)</strong>: High data rates, similar range to UHF.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Detailed Examples</h3>
+
+  <p><strong>UHF RFID</strong>: Used for shipping pallets and IDs. Works using backscatter reflection.</p>
+
+  <p><strong>HF RFID</strong>: Operates using induction coupling, common in passports and bank cards.</p>
+</section>
+
     </div>
   </div>
 </div>
