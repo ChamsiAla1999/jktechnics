@@ -29,14 +29,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
-  
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 50px;
       background-color: #003471;
-      
       border-bottom: 2px solid #003471;
       font-family: Arial, sans-serif;
 
@@ -155,6 +153,21 @@
   cursor: pointer;
 }
 
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
 .page-menu-item {
   height: 350px; /* fixed height for all items */
   display: flex;
@@ -249,7 +262,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-  top: calc(100% + 1px); /* 10px space below the button */
+  top: calc(100% + 5px); /* 10px space below the button */
 }
 .header-buttons a,
 .header-buttons .dropdown > a {
@@ -267,7 +280,6 @@
   width: 100%;
   z-index: 999; /* stays above everything */
 }
-
 
 .dropdown-content {
   min-width: 260px;
@@ -385,32 +397,6 @@
 }
 
 
-.contact-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #007bff, #0056d2);
-  color: #fff;
-  font-weight: 600;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-
-.contact-button {
-  display: flex;
-  justify-content: center;  /* centers horizontally */
-  margin-top: 20px;
-}
-
-.contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-
-
   </style>
   
 </head>
@@ -440,8 +426,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
 	<body class="layoutContent ru-accueil">
+
+   
+
 
 <header class="header">
   <div class="logo-container">
@@ -525,6 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </header>
 
 
+
 		<div id="page">
 			
 			<main>
@@ -547,233 +536,68 @@ document.addEventListener('DOMContentLoaded', () => {
 								  
 <h1>JKTechnics <span>From design to implementation</span></h1>
 
-<div class="pres-metier">
-  <div class="pres-metier-inner">
-    <div class="pres-metier-text"><p class="subtitle">Fields of Expertise</p><h2>Present in all areas of testing</h2>
-
-<h4>At JKTechnics</h4>
-<p>Our expertise centers on <strong>circuit and radio system testing</strong>, covering design, validation, and optimization.</p>
-
-<h4>Radio Development & Testing</h4>
-<p>We specialize in <strong>antenna development</strong>, <strong>Pre-certification testing in anechoic chambers</strong>, and <strong>automation of FCT machines</strong>, alongside comprehensive <strong>hardware and software solutions</strong>.</p>
-
-<h4>Test Bench Design</h4>
-<p>We create <strong>complete test benches</strong> with detailed <strong>wiring diagrams</strong> tailored to each project.</p>
-
-<h5>Consulting & Support</h5>
-<p>Our services also include <strong>consulting</strong> and <strong>support</strong> across sectors such as <strong>automotive</strong>, <strong>water and electricity metering</strong>, <strong>software development</strong>, and <strong>technical project management</strong>.</p></div>
-    <div class="pres-metier-list">
-      
-
-        
-        <a href="functional_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-pupitres-racks.png" alt="icons-icon-pupitres-racks">
-
-
-          <p>Functional test </p>       
-        </a>
-      
-
-      
-
-        <a href="dev_test_bench.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-bancs-de-test.png" alt="icons-icon-bancs-de-test">
-
-
-          <p>Test Bench Integration</p>       
-        </a>
-
-      
-
-      <a href="certification.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-chassis-rack-deverminage.png" alt="icons-icon-chassis-rack-deverminage">
-
-
-          <p>Pre-Certification testing in anechoic chambers</p>       
-      </a>
-
-         
-
-    
-
-      <a href="rf_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/Gemini_Generated_Image_bydbfdbydbfdbydb-removebg-preview (Personnalisé).png" alt="icons-icon-cobotique">
-
-
-          <p>Radio frequency testbenches</p>       
-      </a>
-         
-      
-
-         <a href="pcb.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-routage-cartes-elec.png" alt="icons-icon-routage-cartes-elec">
-
-
-          <p>Circuit design</p>       
-         </a>
-
-      
-
-      
-         
-<a href="Automotive Systems Engineering.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-      
-          <div class="viewproduct"></div>
-          <img src="images/auto_ingeneering.png" alt="icons-icon-interfaces-test-in-situ">
-
-
-          <p>Automotive Systems Engineering </p>       
-</a>
-
-      
-        <a href="metering.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/meters.png" alt="icons-icon-interfaces-test-in-situ">
-
-
-          <p>Smart meters Engineering </p>       
-        </a>
-
-
-         
-        <a href="management.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-outillage-machines-speciales.png" alt="icons-icon-outillage-machines-speciales">
-
-
-          <p>Technical projects management</p>       
-      </a>
-
-      <a href="hardware development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-interfaces-test-in-situ.png" alt="Outillage-fabrication">
-
-
-          <p>Hardware development</p>       
-      </a>
-      
-        <a href="software_development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/outillage-fabrication.png" alt="Outillage-fabrication">
-
-
-          <p>Software development</p>       
-        </a>
-         
-
-      
-    </div>
-  </div>
-</div>
-
 <div class="product-accueil">
   <div class="product-accueil-inner">
 
-      <p class="subtitle">Our High-Precision Laboratory Equipment</p>
-      <h2>JKTechnics: precision and performance thanks to our state-of-the-art laboratory equipment.</h2>
+      <p class="subtitle">Introduction of Radio Frequency Identification (RFID)</p>
+    <p><b>Radio Frequency Identification (RFID) </b>is a form of wireless communication that incorporates the use of electromagnetic or electrostatic coupling in the radio frequency portion of the electromagnetic spectrum to uniquely identify an object or person. It uses radio frequency to search, identify, track, and communicate with items and people.</p>
+    
+    <p>RFID (Radio Frequency Identification) is a technology that uses electromagnetic fields to automatically identify and track tags attached to objects. These tags contain electronically stored information that can be read from several meters away, without requiring direct line-of-sight. RFID is commonly used in inventory management, asset tracking, access control, and supply chain logistics due to its efficiency and accuracy in tracking and managing items.</p>
 
-    <div class="page-menu">
+    <p>It is a method that is used to track or identify an object by radio transmission over the web. Data is digitally encoded in an RFID tag which might be read by the reader. This device works as a tag or label during which data is read from tags that are stored in the database through the reader as compared to traditional barcodes and QR codes. It is often read outside the road of sight either passive or active RFID.</p>
 
-      <div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/10.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Mixed Signal Oscilloscope</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Mixed Signal Oscilloscope</h3>
-  </div>
-</div>
 
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/12.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">RF Signal Generator</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>RF Signal Generator</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/13.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Vector Network Analyzer</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Vector Network Analyzer</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/14.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Spectrum Analyzer</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Spectrum Analyzer</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/15.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Frequency Counter</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Frequency Counter</h3>
-  </div>
-</div>
+    <div class="hardware-images">
+      <img src="images/rfid_2.png" alt="Hardware design 2">
+    </div>
+    <br>
+    <p><b>Types of RFID</b></p>
+    <p>There are many kinds of RFID, each with different properties, but perhaps the most fascinating aspect of RFID technology is that most RFID tags have neither an electric plug nor a battery. Instead, all of the energy needed to operate them is supplied in the form of radio waves by RFID readers. This technology is called passive RFID to distinguish it from the(less common) active RFID in which there is a power source on the tag.</p>
 
     
 
+    <ul type="disc">
+    <li><b>UHF RFID ( Ultra-High Frequency RFID )</b>. It is used on shipping pallets and some driver's licenses. Readers send signals in the 902-928 MHz band. Tags communicate at distances of several meters by changing the way they reflect the reader signals; the reader is able to pick up these reflections. This way of operating is called backscatter.</li>
+    <li><b>HF RFID (High-Frequency RFID )</b>. It operates at 13.56 MHz and is likely to be in your passport, credit cards, books, and noncontact payment systems. HF RFID has a short-range, typically a meter or less because the physical mechanism is based on induction rather than backscatter. </li>   
+    
+    <ul type="disc">
+    <p><b>Passive RFID:</b> Passive RFID tags does not have their own power source. It uses power from the reader. In this device, RF tags are not attached by a power supply and passive RF tag stored their power. When it is emitted from active antennas and the RF tag are used specific frequency like 125-134KHZ as low frequency, 13.56MHZ as a high frequency and 856MHZ to 960MHZ as ultra-high frequency. </p>
+    <li>  ●  No need embedded power</li>
+    <li>  ●  Tracking inventory</li>
+    <li>  ●  Has unique identification number</li>
+    <li>  ●  Sensitive for interference</li>
+    <li>  ●  Semi-passive RFID</li>
+    </ul>
+
+    <ul type="disc">
+    <li><b>Active RFID:</b> In this device, RF tags are attached by a power supply that emits a signal and there is an antenna which receives the data. means, active tag uses a power source like battery. It has it's own power source, does not require power from source/reader. </li>
+    <li>  ●  Embedded power: communication over large distance</li>
+    <li>  ●  Has unique identifier /identification number</li>
+    <li>  ●  Use other devices like sensors</li>
+    <li>  ●  Better than passive tags in the presence of metal</li>
+    </ul>
+
+    <p>There are also other forms of RFID using other frequencies, such as LF RFID(Low-Frequency RFID), which was developed before HF RFID and used for tracking. </p>
+    
+
+    <p><b>Working Principle of RFID</b></p>
+    <p>Generally, RFID uses radio waves to perform AIDC function. AIDC stands for Automatic Identification and Data Capture technology which performs object identification and collection and mapping of the data. An antenna is an device which converts power into radio waves which are used for communication between reader and tag. RFID readers retrieve the information from RFID tag which detects the tag and reads or writes the data into the tag. It may include one processor, package, storage and transmitter and receiver unit. </p> 
+    <!-- Images container -->
+    <div class="hardware-images">
+      <img src="images/rfid_3.png" alt="Hardware design 2">
+    </div>
+        <br>
+     <p><b>Working of RFID System</b></p>
+    <p>Every RFID system consists of three components: a scanning antenna, a transceiver and a transponder. When the scanning antenna and transceiver are combined, they are referred to as an RFID reader or interrogator. There are two types of RFID readers- fixed readers and mobile readers. The RFID reader is a network-connected device that can be portable or permanently attached. It uses radio waves to transmit signals that activate the tag. Once activated, the tag sends a wave back to the antenna, where it is translated into data.</p>
+
+    <p>The transponder is in the RFID tag itself. The read range for RFID tags varies based on factors including the type of tag, type of reader, RFID frequency and interference in the surrounding environment or from other RFID tags and readers. Tags that have a stronger power source also have a longer read range.</p>
+    
     </div>
   </div>
 </div>
 
-<div class="product-accueil">
-  <div class="product-accueil-inner">
-
-      <p class="subtitle">Our Expertise Portfolio</p>
-      <h2>Expertise and innovation showcased through our projects and achievements.</h2>
 
 
-
-      
-    <div class="page-menu">
-
-
-
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/p2.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">RF testbench</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>RF testbench </h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/1.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">RF testbench</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>RF testbench </h3>
-  </div>
-</div>
-        
-
-    </div>
-  </div>
-</div>
 
 <div class="pres-accueil">
   <div class="pres-accueil-inner">
@@ -789,35 +613,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="contact-info">
   <h2 id="contact">Contact</h2>
-
   <div class="contact-item">
     <h3>Address</h3>
     <p>002, Mohamed Badra 1 et N 1, Montplaisir 1002</p>
   </div>
-
-  <br>
-
+<br>
   <div class="contact-item">
     <h3>Phone</h3><br>
     <a href="tel:+21658542836">+33 6 52 91 98 51</a>
-    <br><br>
+      <br>
     <a href="tel:+21621454187">+216 21 454 187</a>
   </div>
-
-  <br>
-
+<br>
   <div class="contact-item">
     <h3>Email</h3>
     <br>
     <a href="mailto:info@jktechnics.com">info@jktechnics.com</a>
+
   </div>
-
-<div class="contact-button">
-  <a href="contact.html" class="valid contact-btn">Contact Us</a>
 </div>
-
-</div>
-
 
 <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.6485732559285!2d10.188343575845448!3d36.817826669823836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34185a6a3157%3A0x6cf0f78f2e41b274!2s002%20Av.%20Mohamed%20Badra%201%20et%20N%201%2C%20Montplaisir%2C%20Tunis%201002!5e0!3m2!1sen!2stn!4v1730010136491!5m2!1sen!2stn"
@@ -861,65 +675,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="pres-accueil-right-item-left"><img src="images/client-7.png" alt="icons-icon-maintenance-outillages"></div>
         </div>
 
-
-        
-    </div>
-    
-  </div>
-</div>
-  <div class="product-accueil">
-  <div class="product-accueil-inner">
-
-      <p class="subtitle">Our Blog</p>
-
-    <div class="page-menu">
-
-      <a class="page-menu-item" href="lora.html">
-  <div class="fit-cover">
-    <img src="images/lorawan.png" alt="interface ICT Keysight.JPG" >
-    <p class="desc-image">What is LoRa technology?</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>What is LoRa technology?</h3>
-  </div>
-</a>
-
-<a class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/RFID1.jpg" alt="interface ICT Keysight.JPG" >
-    <p class="desc-image">Introduction of Radio Frequency Identification </p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Introduction of Radio Frequency Identification </h3>
-  </div>
-</a>
-
-<a class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/uwb1.jpg" alt="interface ICT Keysight.JPG" >
-    <p class="desc-image">What Is Ultra-wideband  Wireless Communication?</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>What Is Ultra-wideband  Wireless Communication?</h3>
-  </div>
-</a>
-
-<a class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/g3_1.png" alt="interface ICT Keysight.JPG" >
-    <p class="desc-image">Technical overview of G3-PLC Hybrid PLC&RF</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Technical overview of G3-PLC Hybrid PLC&RF</h3>
-  </div>
-</a>    
-
     </div>
   </div>
 </div>
-  
-  
-
 
 <div class="entry-header-img fit-cover"><img src="images/bg.jpg" alt="JKTechnics">
 
