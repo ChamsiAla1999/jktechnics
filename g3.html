@@ -1,0 +1,836 @@
+<!DOCTYPE html><html lang="fr"><head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+
+			<title>JKTechnics</title>
+      <link rel="icon" type="image/png" href="images/new_logo.jpg">
+
+			<meta name="description" content="JKTechnics, fabricant d'interfaces de test in-situ et fonctionnelles.">
+			<link rel="stylesheet" type="text/css" href="css/styles-min.css" media="screen" title="Normal"><link rel="stylesheet" type="text/css" href="css/print-min.css" media="print" title="Normal">
+      <script>
+         var tarteaucitronForceExpire = '182';
+          tarteaucitronCustomText = {
+          "privacyUrl":"Politique de cookies",
+          "privacyUrlLink":"/politique-de-cookies/",
+          "alertBigPrivacy" : 
+          "<p>JKTechnics, responsable de traitement, utilise des cookies sur son site internet et vous donne le contrôle sur ceux que vous souhaitez activer :</p><ul><li><strong>Fonctionnement du site :</strong> notre site utilise des cookies pour assurer le fonctionnement optimal du site, ils ne peuvent pas être désactivés.</li><li><strong>Publicité personnalisée (reCAPTCHA) : </strong> cookies destinés à collecter des informations sur votre navigation. Ils poursuivent la finalité de vous proposer des contenus publicitaires en rapport avec vos centres d’intérêt.</li></ul>",
+          };
+      </script>
+			<script src="js/script-cache-0c8ff01c4ff99d654c2ad83eca13d56c.js" type="text/javascript"></script>
+			<link rel="canonical" href="https://jktechnics-xi.vercel.app/">
+
+		<script>
+			/*fancybox3, fonction fancybox null pour éviter erreurs js dans appel initial de fancybox (annuaire, article)*/
+			$.fn.fancybox = function(){};
+		</script>
+	
+    <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #003471;
+      border-bottom: 2px solid #003471;
+      font-family: Arial, sans-serif;
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .logo img {
+          height: 60px;
+        }
+
+        .corporate-name {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 26px;
+          font-weight: 800;
+          color: #0073d0;
+        }
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+
+          &:hover {
+            color: #0078d7;
+          }
+        }
+      }
+    }
+    
+    .contact-info {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #004E49;
+}
+
+.contact-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #02B8A2;
+  font-size: 1.6em;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item h3 {
+  font-size: 1em;
+  color: #006B63;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.contact-item a {
+  color: #004E49;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #02B8A2;
+}
+
+
+/* The modal overlay */
+.image-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8); /* dark background */
+}
+
+/* Modal content (image) */
+.image-modal img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+/* Close button */
+.image-modal .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
+
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
+
+.page-menu-item {
+  height: 350px; /* fixed height for all items */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps text at bottom */
+  overflow: hidden;
+}
+
+.page-menu-item .fit-cover {
+  flex: 1; /* takes all remaining space */
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-menu-item .fit-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill container without distortion */
+}
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto; /* This pushes them to the right */
+}
+
+.header-buttons a {
+  background: #ffffff;
+  color: #003471;
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+  border: 2px solid #ffffff;
+}
+
+.header-buttons a:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes logo left and buttons right */
+  width: 100%;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #ffffff;
+  padding: 8px 0;
+  border-radius: 8px;
+  min-width: 210px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #003471;
+  text-decoration: none;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+/* Hover effect inside dropdown */
+.dropdown-content a:hover {
+  background: #003471;
+  color: #ffffff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header-buttons .dropdown-menu {
+  top: 48px; /* pushes the dropdown down */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  top: calc(100% + 1px); /* 10px space below the button */
+}
+.header-buttons a,
+.header-buttons .dropdown > a {
+    display: flex;              /* flex for vertical alignment */
+    align-items: center;        /* center text vertically */
+    justify-content: center;    /* center text horizontally */
+    padding: 7px 18px;          /* keep your existing padding */
+    height: 42px;               /* force all buttons to the same height */
+    box-sizing: border-box;     /* include padding in height */
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* stays above everything */
+}
+
+.dropdown-content {
+  min-width: 260px;
+}
+
+.dropdown-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+
+
+@media (max-width: 768px) {
+  /* Menu principal vertical */
+  .header-buttons {
+    flex-direction: column;   /* empile les boutons */
+    width: 100%;
+    gap: 8px;                 /* espace entre boutons */
+    padding: 10px;            /* padding autour du bloc */
+  }
+
+  .header-buttons a,
+  .header-buttons .dropdown > a {
+    width: 100%;              /* prend toute la largeur */
+    text-align: center;
+    padding: 12px 15px;       /* padding intérieur pour le texte */
+    box-sizing: border-box;   /* inclut le padding dans la largeur */
+    border-radius: 8px;       /* coins arrondis */
+  }
+
+  /* Dropdown mobile */
+  .dropdown-content {
+    position: static;         /* sous-menu sous le parent */
+    display: none;            /* caché par défaut */
+    background: #003471;
+    border-radius: 8px;       /* coins arrondis */
+    box-shadow: none;
+    width: 100%;
+    padding: 5px 0;           /* padding autour des liens */
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px 15px;       /* padding pour chaque lien */
+    color: white;
+    text-align: center;
+  }
+
+  /* Dropdown visible quand parent open */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+}
+
+
+
+/* Toggle burger icon */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 10px;
+}
+.mobile-menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Menu mobile hidden by default */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #003471;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+}
+
+.mobile-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.mobile-menu.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background: #004a99;
+}
+
+.submenu a {
+  padding-left: 40px;
+  border: none;
+}
+
+/* Media query mobile */
+@media(max-width:768px) {
+  .header-buttons { display: none; } /* hide desktop buttons */
+  .mobile-menu-toggle { display: flex; }
+}
+h2, h3, h4 {
+    color: white;
+  }
+.contact-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #007bff, #0056d2);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+
+.contact-button {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  margin-top: 20px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+  </style>
+  
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+
+  toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+
+  // Submenu toggle
+  document.querySelectorAll('.mobile-menu > a').forEach(link => {
+    link.addEventListener('click', e => {
+      const next = link.nextElementSibling;
+      if (next && next.classList.contains('submenu')) {
+        e.preventDefault();
+        next.style.display = next.style.display === 'flex' ? 'none' : 'flex';
+      }
+    });
+  });
+});
+</script>
+	<body class="layoutContent ru-accueil">
+
+   
+
+
+<header class="header">
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html"><img src="images/new_logo.jpg" alt="Logo" /></a>
+    </div>
+
+<!-- Add this inside your <header class="header">, after logo -->
+<div class="mobile-menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="mobile-menu">
+  <a href="#">Automation and testing</a>
+  <div class="submenu">
+    <a href="functional_test.html">Functional test</a>
+    <a href="dev_test_bench.html">Test Bench Integration</a>
+    <a href="rf_test.html">RF testbenches & Antenna testing</a>
+    <a href="certification.html">Pre-certification test</a>
+  </div>
+
+  <a href="#">PCB Design</a>
+  <div class="submenu">
+    <a href="hardware development.html">Hardware development</a>
+    <a href="software_development.html">Software development</a>
+    <a href="pcb.html">Circuit design</a>
+  </div>
+
+  <a href="#">Project Management</a>
+  <div class="submenu">
+    <a href="Automotive Systems Engineering.html">Automotive systems</a>
+    <a href="metering.html">Smart meters</a>
+    <a href="management.html">Technical support</a>
+  </div>
+
+  <a href="#contact">Contact</a>
+</div>
+
+
+
+
+    <div class="header-buttons">
+
+      <!-- SERVICES DROPDOWN -->
+      <div class="dropdown">
+        <a href="#">Automation and testing</a>
+        <div class="dropdown-content">
+          <a href="functional_test.html">Functional test</a>
+          <a href="dev_test_bench.html">Test Bench Integration</a>
+          <a href="rf_test.html">RF testbenches & Antenna testing</a>
+          <a href="certification.html">Pre-certification test</a>
+        </div>
+      </div>
+
+      <!-- PCB DESIGN DROPDOWN -->
+      <div class="dropdown">
+        <a href="#">PCB Design</a>
+        <div class="dropdown-content">
+          <a href="hardware development.html">Hardware development</a>
+          <a href="software_development.html">Software development</a>
+          <a href="pcb.html">Circuit design</a>
+        </div>
+      </div>
+
+      <!-- PROJECT MANAGEMENT DROPDOWN -->
+      <div class="dropdown">
+        <a href="#">Project Management</a>
+        <div class="dropdown-content">
+          <a href="Automotive Systems Engineering.html">Automotive systems</a>
+          <a href="metering.html">Smart meters</a>
+          <a href="management.html">Technical support</a>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+
+
+		<div id="page">
+			
+			<main>
+			 	<article>  
+
+						<header class="entry-header">
+							<div class="entry-header-inner">
+								<div class="entry-header-content"><div class="entry-header-content-inner"></div></div>
+								<div class="entry-header-bread">
+<div class="breadcrumb">
+	<div class="breadcrumb-inner">
+<span><a title="Accueil" href="/" lang="fr"><span>Accueil</span></a></span>
+</div>
+</div></div>
+							</div>
+						</header>
+						<div class="entry-content">
+							<div class="entry-content-inner">
+                <div class="entry-content-content">
+								  
+<h1>JKTechnics <span>From design to implementation</span></h1>
+
+<div class="product-accueil">
+  <div class="product-accueil-inner">
+
+      <p class="subtitle">Technical overview of G3-PLC Hybrid PLC&RF</p>
+        <br>
+      <h3>Introduction</h3>
+    <p>Since its first public specification in 2015 and its continuous development by the G3-PLC Alliance, the G3-PLC technology has been broadly deployed all over the world for smart metering and other applications.</p>
+    <p>One of the feedbacks from large roll-out was that, while connectivity to 99% of devices was possible, achieving consistent connectivity to the remaining 1% of devices was difficult.</p>
+    <p>To address this challenge, the G3-PLC Alliance has developed a hybrid technology mixing PLC with RF: the G3-PLC Hybrid PLC&RF profile combines the advantages of both technologies to add stability, reliability and robustness. By selecting the best medium at any point in the network, it maximises the coverage and connectivity of the system.</p>
+    <p>It also enables to develop and address new use-cases beyond the smart metering as it will allow to extend the connectivity of G3-PLC to RF-only devices.</p>
+    <br>
+    <h3>G3-PLC Hybrid PLC&RF key features</h3>
+    <p>G3-PLC Hybrid PLC&RF is an extension of the existing G3-PLC standard, providing a secondary radio frequency (RF) medium and allowing full compatibility and interoperability with PLC-only devices and networks. Hence, it is possible to install hybrid devices in an existing network without requiring any update of the PLC-only devices.</p>
+    <p>G3-PLC Hybrid PLC&RF has also been designed so that every device automatically selects the best available link (PLC or RF) to communicate with other devices. As a result, the resulting topology will mix PLC and RF links as shown in the figure below:</p>
+    <div class="hardware-images">
+      <img src="images/g3_2.png" alt="Hardware design 2">
+    </div>
+    <br>
+    <p>As for G3-PLC, G3-PLC Hybrid PLC&RF covers the Physical (layer 1) and Data Link (layer 2) layers of OSI model : the extension is shown in purple in the figure below:</p>
+    <div class="hardware-images">
+      <img src="images/g3_3.png" alt="Hardware design 2">
+    </div>
+    <br>
+    <h3>RF Physical layer</h3>
+    <p>The RF physical layer is based on the SUN (Smart Utility Network) FSK profile defined by the IEEE 802.15.4-2020 standard. It provides 2 modes of operation: a first mandatory mode, mode #1, with a data rate of 50 kbps and a second optional mode with higher data rate from 100 kbps up to 400 kbps depending of the operating frequency band.</p>
+    <p>Forward Error Correction (FEC) mechanisms are also defined and can be activated for additional robustness (at the cost of decreased data rate).</p>
+    <p>Several operating frequency bands are defined from 863 to 920 MHz allowing to comply with a broader set of regional regulations. Nonetheless, additional operating frequencies are under evaluation to be added in the future.</p>
+
+    <h3>RF MAC Sublayer</h3>
+    <p>The RF MAC sublayer is part of the Data Link Layer and is based on IEEE 802.15.4-2020 standard.</p>
+    <p>Its role is identical to the PLC MAC sublayer, except on the following points:</p>
+    <ul>
+    <li>There is no segmentation as it is not required by the RF PHY layer</li>
+    <li>The acknowledgement mechanism uses MAC Enhanced-Acknowledgment frames instead of PHY layer frames for PLC</li>
+    <li>Information Elements (IE) are used to exchange RF information between neighbour nodes, instead of the PLC-specific tone-map mechanism. For now, the following information is exchanged: duty cycle consumption, transmission power, offset settings and link quality</li>
+    </ul>
+    <p>In addition, as the reference version of the IEEE 802.15.4 standard is not the same between PLC and RF (-2006 for PLC, -2020 for RF), the MAC frame formats are slightly different for both mediums.</p>
+    <p>Finally, additional mechanisms are specified to comply with regional regulations, such as automatic transmission power control and duty cycle limits, using the Information Elements included in the exchanged messages.</p>
+    <p>To comply with a broader set of regional regulations, the G3-PLC Alliance has recently developed a “frequency hopping” mechanism: each device has a schedule and rapidly changes its carrier frequency accordingly. It also allows to reduce collisions and be more robust to interference, at the cost of additional complexity to synchronise the devices.</p>
+    
+    <h3>Hybrid Abstraction layer and Adaptation layer</h3>
+    <p>The G3-PLC Hybrid Abstraction layer and the Adaptation layer are part of the Data Link Layer.</p>
+    <p>The Hybrid Abstraction layer role is to interface both PLC and RF MAC layers with the G3-PLC Adaptation layer. It defines a set of primitives containing an additional MediaType parameter, allowing to control over which medium a frame has to be sent (over PLC, RF or both) and to know from which medium a frame has been received.</p>
+    <p>It is also possible to control whether, after a failure on the targeted medium, the second medium will be used as a backup: this may allow to overcome temporary failure without requiring to repair the route.</p>
+    <p>A de-duplication mechanism has also been defined so that a frame received from both mediums is indicated only once to the G3-PLC Adaptation sublayer.</p>
+    <p>The G3-PLC Adaptation layer role remains mostly unchanged, with small adaptations to manage both mediums:</p>
+    <ul>
+    <li>Routing table and blacklist table have been extended to store the target medium</li>
+    <li>A link cost formula (used by the routing algorithm to select the best route) has been defined for RF, with separate weighting factors. This allows to express preferences between mediums by setting different factor values for RF and PLC</li>
+    <li>The Path discovery mechanism has been extended to provide information regarding the medium used</li>
+    </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="pres-accueil">
+  <div class="pres-accueil-inner">
+    <div class="pres-accueil-left">
+
+
+
+        <p class="subtitle">Contact-us</p>
+       
+        <p>Do you have a question or a project in mind? Contact us — we’re here to help!</p>
+
+        
+
+<div class="contact-info">
+  <h2 id="contact">Contact</h2>
+
+  <div class="contact-item">
+    <h3>Address</h3>
+    <p>002, Mohamed Badra 1 et N 1, Montplaisir 1002</p>
+  </div>
+
+  <br>
+
+  <div class="contact-item">
+    <h3>Phone</h3><br>
+    <a href="tel:+21658542836">+33 6 52 91 98 51</a>
+    <br><br>
+    <a href="tel:+21621454187">+216 21 454 187</a>
+  </div>
+
+  <br>
+
+  <div class="contact-item">
+    <h3>Email</h3>
+    <br>
+    <a href="mailto:info@jktechnics.com">info@jktechnics.com</a>
+  </div>
+
+<div class="contact-button">
+  <a href="contact.html" class="valid contact-btn">Contact Us</a>
+</div>
+
+</div>
+
+
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.6485732559285!2d10.188343575845448!3d36.817826669823836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34185a6a3157%3A0x6cf0f78f2e41b274!2s002%20Av.%20Mohamed%20Badra%201%20et%20N%201%2C%20Montplaisir%2C%20Tunis%201002!5e0!3m2!1sen!2stn!4v1730010136491!5m2!1sen!2stn"
+    width="100%"
+    height="380"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+    </div>
+    <div class="pres-accueil-right">
+      <p class="subtitle">Clients</p>
+
+        <div class="pres-accueil-right-item">
+          <div class="pres-accueil-right-item-left"><img src="images/client-5.png" alt="valeo"></div>
+          
+        </div>
+
+
+        <div class="pres-accueil-right-item">
+          <div class="pres-accueil-right-item-left"><img src="images/client-6.png" alt="icons-icon-controle-impacts"></div>
+        </div>
+
+
+        <div class="pres-accueil-right-item">
+          <div class="pres-accueil-right-item-left"><img src="images/client-10.png" alt="icons-icon-analyse-contraintes"></div>
+        </div>
+
+
+        <div class="pres-accueil-right-item">
+          <div class="pres-accueil-right-item-left"><img src="images/client-11.png" alt="icons-icon-maintenance-outillages"></div>
+        </div>
+
+        <div class="pres-accueil-right-item">
+          <div class="pres-accueil-right-item-left"><img src="images/client-3.png" alt="icons-icon-maintenance-outillages"></div>
+        </div>
+
+         <div class="pres-accueil-right-item">
+          <div class="pres-accueil-right-item-left"><img src="images/client-7.png" alt="icons-icon-maintenance-outillages"></div>
+        </div>
+
+
+        
+    </div>
+    
+  </div>
+</div>
+  <div class="product-accueil">
+  <div class="product-accueil-inner">
+
+      <p class="subtitle">Our Blog</p>
+
+    <div class="page-menu">
+
+      <a class="page-menu-item" href="lora.html">
+  <div class="fit-cover">
+    <img src="images/lorawan.png" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">What is LoRa technology?</p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>What is LoRa technology?</h3>
+  </div>
+</a>
+
+<a class="page-menu-item" href="rfid.html">
+  <div class="fit-cover">
+    <img src="images/RFID1.jpg" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">Introduction of Radio Frequency Identification </p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>Introduction of Radio Frequency Identification </h3>
+  </div>
+</a>
+
+<a class="page-menu-item" href="uwb.html">
+  <div class="fit-cover">
+    <img src="images/uwb1.jpg" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">What Is Ultra-wideband  Wireless Communication?</p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>What Is Ultra-wideband  Wireless Communication?</h3>
+  </div>
+</a>
+
+<a class="page-menu-item" href="g3.html">
+  <div class="fit-cover">
+    <img src="images/g3_1.png" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">Technical overview of G3-PLC Hybrid PLC&RF</p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>Technical overview of G3-PLC Hybrid PLC&RF</h3>
+  </div>
+</a>    
+
+    </div>
+  </div>
+</div>
+  
+  
+
+
+<div class="entry-header-img fit-cover"><img src="images/bg.jpg" alt="JKTechnics">
+
+</div>
+<script src="js/slick.min.js"></script>
+<script>
+  var srcimg = $('.entry-header-img img').attr('src');
+  $('.entry-header-img').appendTo('.entry-header');
+  
+  if (window.matchMedia("(min-width:1248px)").matches) {
+    $('<div class="pres-metier-list-item empty"></div>').insertAfter('.pres-metier-list-item:nth-child(2)')
+  }
+  $('.product-accueil .page-menu').slick({
+    variableWidth: true,
+    infinite:false,
+  });
+</script>
+
+
+                </div>
+							</div>
+						</div>
+
+				</article>         
+			</main>
+			 
+		</div>
+    
+		
+		<script>$('h1').prependTo('.entry-header-content-inner');</script>
+		<script defer="" src="js/stup.min.js"></script>
+	<script type="text/javascript">
+				<!--
+					(tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");(tarteaucitron.job = tarteaucitron.job || []).push("iframe");var tarteaucitronForceLanguage = "fr"
+				//-->
+				</script>
+</body>
+<!-- Modal container -->
+<div id="myModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg" src="">
+</div>
+
+<script>
+  const modal = document.getElementById('myModal');
+  const modalImg = document.getElementById('modalImg');
+  const images = document.querySelectorAll('.clickable-image');
+  const closeBtn = document.querySelector('.close-modal');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  }
+
+  // Close modal on click outside the image
+  modal.addEventListener('click', e => {
+    if(e.target === modal) modal.style.display = "none";
+  });
+</script>
+
+</html>

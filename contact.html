@@ -262,7 +262,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-  top: calc(100% + 5px); /* 10px space below the button */
+  top: calc(100% + 1px); /* 10px space below the button */
 }
 .header-buttons a,
 .header-buttons .dropdown > a {
@@ -394,6 +394,30 @@
 @media(max-width:768px) {
   .header-buttons { display: none; } /* hide desktop buttons */
   .mobile-menu-toggle { display: flex; }
+}
+.contact-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #007bff, #0056d2);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+
+.contact-button {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  margin-top: 20px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 
@@ -551,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	<a name="formulaire"></a> 
-	<form method="post"  id="formpersonnalise8" enctype="multipart/form-data" action="https://formsubmit.co/chamsiala599@gmail.com">
+	<form method="post"  id="formpersonnalise8" enctype="multipart/form-data" action="https://formsubmit.co/info@jktechnics.com">
 
 				<fieldset>
 
@@ -718,25 +742,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="contact-info">
   <h2 id="contact">Contact</h2>
+
   <div class="contact-item">
     <h3>Address</h3>
     <p>002, Mohamed Badra 1 et N 1, Montplaisir 1002</p>
   </div>
-<br>
+
+  <br>
+
   <div class="contact-item">
     <h3>Phone</h3><br>
     <a href="tel:+21658542836">+33 6 52 91 98 51</a>
-      <br>
+    <br><br>
     <a href="tel:+21621454187">+216 21 454 187</a>
   </div>
-<br>
+
+  <br>
+
   <div class="contact-item">
     <h3>Email</h3>
     <br>
     <a href="mailto:info@jktechnics.com">info@jktechnics.com</a>
-
   </div>
+
+<div class="contact-button">
+  <a href="contact.html" class="valid contact-btn">Contact Us</a>
 </div>
+
+</div>
+
 
 <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.6485732559285!2d10.188343575845448!3d36.817826669823836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34185a6a3157%3A0x6cf0f78f2e41b274!2s002%20Av.%20Mohamed%20Badra%201%20et%20N%201%2C%20Montplaisir%2C%20Tunis%201002!5e0!3m2!1sen!2stn!4v1730010136491!5m2!1sen!2stn"
@@ -780,9 +814,65 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="pres-accueil-right-item-left"><img src="images/client-7.png" alt="icons-icon-maintenance-outillages"></div>
         </div>
 
+
+        
+    </div>
+    
+  </div>
+</div>
+  <div class="product-accueil">
+  <div class="product-accueil-inner">
+
+      <p class="subtitle">Our Blog</p>
+
+    <div class="page-menu">
+
+      <a class="page-menu-item" href="lora.html">
+  <div class="fit-cover">
+    <img src="images/lorawan.png" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">What is LoRa technology?</p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>What is LoRa technology?</h3>
+  </div>
+</a>
+
+<a class="page-menu-item" href="rfid.html">
+  <div class="fit-cover">
+    <img src="images/RFID1.jpg" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">Introduction of Radio Frequency Identification </p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>Introduction of Radio Frequency Identification </h3>
+  </div>
+</a>
+
+<a class="page-menu-item" href="uwb.html">
+  <div class="fit-cover">
+    <img src="images/uwb1.jpg" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">What Is Ultra-wideband  Wireless Communication?</p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>What Is Ultra-wideband  Wireless Communication?</h3>
+  </div>
+</a>
+
+<a class="page-menu-item" href="g3.html">
+  <div class="fit-cover">
+    <img src="images/g3_1.png" alt="interface ICT Keysight.JPG" >
+    <p class="desc-image">Technical overview of G3-PLC Hybrid PLC&RF</p>
+  </div>
+  <div class="page-menu-item-txt">
+    <h3>Technical overview of G3-PLC Hybrid PLC&RF</h3>
+  </div>
+</a>    
+
     </div>
   </div>
 </div>
+  
+  
+
 
 <div class="entry-header-img fit-cover"><img src="images/bg.jpg" alt="JKTechnics">
 
@@ -851,3 +941,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 </html>
+
+

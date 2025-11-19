@@ -383,7 +383,20 @@
   .header-buttons { display: none; } /* hide desktop buttons */
   .mobile-menu-toggle { display: flex; }
 }
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
 
+.hardware-images img {
+  max-width: 80%;   /* scale down on mobile */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+}
 
 .contact-btn {
   display: inline-block;
@@ -574,18 +587,13 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>Functional test </p>       
         </a>
       
-
-      
-
-        <a href="dev_test_bench.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
+         <a href="rf_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
           <div class="viewproduct"></div>
-          <img src="images/icons-icon-bancs-de-test.png" alt="icons-icon-bancs-de-test">
+          <img src="images/Gemini_Generated_Image_bydbfdbydbfdbydb-removebg-preview (Personnalisé).png" alt="icons-icon-cobotique">
 
 
-          <p>Test Bench Integration</p>       
-        </a>
-
-      
+          <p>Radio frequency testbenches</p>       
+      </a>
 
       <a href="certification.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
           <div class="viewproduct"></div>
@@ -594,22 +602,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <p>Pre-Certification testing in anechoic chambers</p>       
       </a>
-
-         
-
-    
-
-      <a href="rf_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/Gemini_Generated_Image_bydbfdbydbfdbydb-removebg-preview (Personnalisé).png" alt="icons-icon-cobotique">
-
-
-          <p>Radio frequency testbenches</p>       
-      </a>
-         
       
-
-         <a href="pcb.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
+      <a href="pcb.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
           <div class="viewproduct"></div>
           <img src="images/icons-icon-routage-cartes-elec.png" alt="icons-icon-routage-cartes-elec">
 
@@ -617,9 +611,33 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>Circuit design</p>       
          </a>
 
-      
+               <a href="hardware development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
+          
+          <div class="viewproduct"></div>
+          <img src="images/icons-icon-interfaces-test-in-situ.png" alt="Outillage-fabrication">
 
+
+          <p>Hardware development</p>       
+      </a>
       
+        <a href="software_development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
+          <div class="viewproduct"></div>
+          <img src="images/outillage-fabrication.png" alt="Outillage-fabrication">
+
+
+          <p>Software development</p>       
+        </a>
+
+
+
+        <a href="dev_test_bench.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
+          <div class="viewproduct"></div>
+          <img src="images/icons-icon-bancs-de-test.png" alt="icons-icon-bancs-de-test">
+
+
+          <p>Test Bench Integration</p>       
+        </a>         
+         
          
 <a href="Automotive Systems Engineering.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
       
@@ -649,22 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>Technical projects management</p>       
       </a>
 
-      <a href="hardware development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          
-          <div class="viewproduct"></div>
-          <img src="images/icons-icon-interfaces-test-in-situ.png" alt="Outillage-fabrication">
 
-
-          <p>Hardware development</p>       
-      </a>
-      
-        <a href="software_development.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
-          <div class="viewproduct"></div>
-          <img src="images/outillage-fabrication.png" alt="Outillage-fabrication">
-
-
-          <p>Software development</p>       
-        </a>
          
 
       
@@ -675,75 +678,8 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="product-accueil">
   <div class="product-accueil-inner">
 
-      <p class="subtitle">Our High-Precision Laboratory Equipment</p>
-      <h2>JKTechnics: precision and performance thanks to our state-of-the-art laboratory equipment.</h2>
-
-    <div class="page-menu">
-
-      <div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/10.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Mixed Signal Oscilloscope</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Mixed Signal Oscilloscope</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/12.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">RF Signal Generator</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>RF Signal Generator</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/13.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Vector Network Analyzer</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Vector Network Analyzer</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/14.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Spectrum Analyzer</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Spectrum Analyzer</h3>
-  </div>
-</div>
-
-<div class="page-menu-item">
-  <div class="fit-cover">
-    <img src="images/15.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">Frequency Counter</p>
-  </div>
-  <div class="page-menu-item-txt">
-    <h3>Frequency Counter</h3>
-  </div>
-</div>
-
-    
-
-    </div>
-  </div>
-</div>
-
-<div class="product-accueil">
-  <div class="product-accueil-inner">
-
-      <p class="subtitle">Our Expertise Portfolio</p>
+      <p class="subtitle">Realization</p>
       <h2>Expertise and innovation showcased through our projects and achievements.</h2>
-
-
-
       
     <div class="page-menu">
 
@@ -774,6 +710,28 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </div>
+
+<div class="product-accueil">
+  <div class="product-accueil-inner">
+
+      <p class="subtitle">Our Advanced Laboratory Facilities</p>
+       <h3 style="color: #fff;">
+    At JKTechnics, we maintain a fully equipped laboratory designed for precision testing and high-performance results.  </h3>
+    <br>
+    <h3 style="color: #fff;">Our facilities include all the necessary instruments, and we also have access to an anechoic chamber, allowing specialized radio frequency and acoustic measurements with exceptional accuracy.
+       </h3>
+       <br>
+      <!-- Images container -->
+    <div class="hardware-images">
+      
+      
+      <img src="images/chambre.jpeg" alt="Hardware design 1">
+      
+    </div>
+  </div>
+</div>
+
+
 
 <div class="pres-accueil">
   <div class="pres-accueil-inner">
@@ -884,7 +842,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </a>
 
-<a class="page-menu-item">
+<a class="page-menu-item" href="rfid.html">
   <div class="fit-cover">
     <img src="images/RFID1.jpg" alt="interface ICT Keysight.JPG" >
     <p class="desc-image">Introduction of Radio Frequency Identification </p>
@@ -894,7 +852,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </a>
 
-<a class="page-menu-item">
+<a class="page-menu-item" href="uwb.html">
   <div class="fit-cover">
     <img src="images/uwb1.jpg" alt="interface ICT Keysight.JPG" >
     <p class="desc-image">What Is Ultra-wideband  Wireless Communication?</p>
@@ -904,7 +862,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </a>
 
-<a class="page-menu-item">
+<a class="page-menu-item" href="g3.html">
   <div class="fit-cover">
     <img src="images/g3_1.png" alt="interface ICT Keysight.JPG" >
     <p class="desc-image">Technical overview of G3-PLC Hybrid PLC&RF</p>
