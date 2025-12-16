@@ -424,7 +424,13 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-
+.hardware-images {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between images */
+  margin-top: 20px;
+}
   </style>
 
 </head>
@@ -545,24 +551,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			 	<article>  
 
 						<header class="entry-header">
-							<div class="entry-header-inner">
-								<div class="entry-header-content"><div class="entry-header-content-inner"></div></div>
-								<div class="entry-header-bread">
-<div class="breadcrumb">
-	<div class="breadcrumb-inner">
-<span><a title="Accueil" href="/" lang="fr"><span>Accueil</span></a></span>
-</div>
-</div></div>
-							</div>
+              
+							
+                <br>
+								<br>
+                <br>
+                <img src="images/bg.jpg" alt="JKTechnics">
+              <br>
+                
+								
 						</header>
 						<div class="entry-content">
 							<div class="entry-content-inner">
                 <div class="entry-content-content">
 								  
-<h1>JKTechnics <span>From design to implementation</span></h1>
 
 <div class="pres-metier">
   <div class="pres-metier-inner">
+    
     <div class="pres-metier-text"><p class="subtitle">Fields of Expertise</p><h2>Present in all areas of testing</h2>
 
 <h4>At JKTechnics</h4>
@@ -576,10 +582,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <h5>Consulting & Support</h5>
 <p>Our services also include <strong>consulting</strong> and <strong>support</strong> across sectors such as <strong>automotive</strong>, <strong>water and electricity metering</strong>, <strong>software development</strong>, and <strong>technical project management</strong>.</p></div>
-    <div class="pres-metier-list">
+   
+<div class="pres-metier-list">
       
 
-        
+       
         <a href="functional_test.html" class="pres-metier-list-item" style="text-decoration:none; color:inherit;">
           <div class="viewproduct"></div>
           <img src="images/icons-icon-pupitres-racks.png" alt="icons-icon-pupitres-racks">
@@ -700,10 +707,10 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="page-menu-item">
   <div class="fit-cover">
     <img src="images/1.jpg" alt="interface ICT Keysight.JPG" class="clickable-image">
-    <p class="desc-image">RF testbench</p>
+    <p class="desc-image">FCT testbench</p>
   </div>
   <div class="page-menu-item-txt">
-    <h3>RF testbench </h3>
+    <h3>FCT testbench </h3>
   </div>
 </div>
         
@@ -891,9 +898,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
 
-<div class="entry-header-img fit-cover"><img src="images/bg.jpg" alt="JKTechnics">
 
-</div>
 <script src="js/slick.min.js"></script>
 <script>
   var srcimg = $('.entry-header-img img').attr('src');
